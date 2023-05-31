@@ -1,0 +1,76 @@
+body {
+    background-color: #144A52;
+    color: #fff;
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/009/167/381/original/realistic-natural-water-wave-overlay-for-background-blurred-transparent-blue-colored-water-surface-texture-with-splashes-and-bubbles-trendy-abstract-background-free-video.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    font-family: Corbel, Corbel;
+    font-size: 1.3em;
+}
+
+h1, h5 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-family: Corbel, Corbel;
+    font-size: .5em;
+}    
+h3 {
+    text-align: center;
+    font-family: Corbel, Corbel;
+    font-size: 1em;
+}
+
+#score {
+    text-align: center;
+    font-size: 1.5em;
+    
+}
+
+#meaning {
+    text-align: center;
+    font-size: .8em;
+}
+
+.button {
+    border-radius:4px;
+    background-color: #84979C;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#buttondiv {
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.button:hover {
+    background-color: #9DAAB3;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #032c44;
+    border-radius: 10px;
+}
+
+input[type=checkbox] {
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  transform: scale(1.5);
+  padding: 10px;
+}
