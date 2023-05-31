@@ -1,31 +1,40 @@
-//Hides refresh button on load, could be optimized in the future
+//Hides refresh button on load
 window.onload = function() {
     document.getElementById("refresh").style.display="none";
 };
 
 //Clears all the check boxes
 function clearBoxes(){
-    var checkedBoxes = document.querySelectorAll('input:checked') //Get all the boxes that are checked
-    for (var i = 0; i < checkedBoxes.length; i++) { //Run through each checked box and uncheck it
+    var checkedBoxes = document.querySelectorAll('input:checked')
+    for (var i = 0; i < checkedBoxes.length; i++) {
         checkedBoxes[i].checked = false;
     }
 }
 
 //Calculates your score
 function calculateScore() {
-    var totalChecked = document.querySelectorAll('input[type="checkbox"]:checked') //Gets all the boxes that were checked
-    var score = 100 - totalChecked.length //Subtracts the amount of boxes checked from 100, which results in the score
+    var totalChecked = document.querySelectorAll('input[type="checkbox"]:checked')
+    var score = 100 - totalChecked.length
 
-    //Associates your score with what it says about you
     var meaning;
     if (score >= 95) {
         meaning = "Hmm. That's sad."
-    } else if (score >= 90) {
+    } else if (score >= 93) {
         meaning = "Damn, make some more moves."
+    } else if (score >= 90) {
+        meaning = "You can do better. Way better."
+    } else if (score >= 88) {
+        meaning = "C'mon dude, step it up"
     } else if (score >= 85) {
         meaning = "Get to it, you can do better."
+    } else if (score >= 80) {
+        meaning = "You're on your way!"
     } else if (score >= 77) {
         meaning = "Alright, you're getting there."
+    } else if (score >= 70) {
+        meaning = "You're doing fine, I guess."
+    } else if (score >= 63) {
+        meaning = "Respectable."
     } else if (score >= 45) {
         meaning = "Atta boy that's what I'm talking about."
     } else if (score >= 9) {
@@ -34,21 +43,21 @@ function calculateScore() {
         meaning = "DAMN, SLUT."
     }
 
-    var scoreDiv = document.getElementById("score"); //Gets the score div which is where the score is displayed
-    var meaningDiv = document.getElementById("meaning"); //Gets the score div which is where the score is displayed
-    scoreDiv.innerHTML = "Your Score: " + score.toString() //Sets the div text to your score
-    meaningDiv.innerHTML = meaning //Sets the div text to your meaning
-    document.getElementById("refresh").style.display="inline"; //Reveals the refresh page button
-    document.body.scrollTop = 0; // Scrolls to top of the page for Safari
-    document.documentElement.scrollTop = 0; // Scrolls to the top of the page for Chrome, Firefox, IE, and Opera
+    var scoreDiv = document.getElementById("score");
+    var meaningDiv = document.getElementById("meaning"); 
+    scoreDiv.innerHTML = "Your Score: " + score.toString()
+    meaningDiv.innerHTML = meaning
+    document.getElementById("refresh").style.display="inline"; 
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0;
 }
 
 //Clears the page (clear page button)
 function clearPage() {
-    clearBoxes() //Calls the clearBoxes function to clear all the boxes
-    var scoreDiv = document.getElementById("score"); //Gets the score div which is where the score is displayed
-    var meaningDiv = document.getElementById("meaning"); //Gets the score div which is where the score is displayed
-    scoreDiv.innerHTML = "" //Makes the score div blank
-    meaningDiv.innerHTML = "" //Makes the meaning div blank
+    clearBoxes()
+    var scoreDiv = document.getElementById("score"); 
+    var meaningDiv = document.getElementById("meaning"); 
+    scoreDiv.innerHTML = "" 
+    meaningDiv.innerHTML = "" 
     document.getElementById("refresh").style.display="none"; //Hides the clear page button button
 }
